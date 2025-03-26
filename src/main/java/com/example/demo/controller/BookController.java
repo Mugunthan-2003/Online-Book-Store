@@ -26,6 +26,11 @@ public class BookController {
         return bookService.getAllBooks();
     }
 
+    // Retrieve a specific book mapping
+    @GetMapping("/{id}")
+    public Book getBookById(@PathVariable int id) {
+        return bookService.getBookById(id);
+    }
 
     // Update an existing book mapping
     @PutMapping("/{id}")
